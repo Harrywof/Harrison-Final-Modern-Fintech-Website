@@ -246,7 +246,9 @@ export default function HomePage() {
             {"I'm always interested in discussing tokenization strategy, fintech innovation, and institutional partnerships."}
           </p>
           <Link
-            href="mailto:harrison.feig@gmail.com"
+            href="https://www.linkedin.com/in/harrison-feig/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:bg-accent/90 transition-colors"
           >
             Start a Conversation

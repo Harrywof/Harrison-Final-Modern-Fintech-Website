@@ -211,7 +211,9 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
             <p className="text-muted-foreground text-sm">{"Let's discuss how I can support your tokenization and digital assets initiatives."}</p>
           </div>
           <a
-            href="mailto:harrison.feig@gmail.com"
+            href="https://www.linkedin.com/in/harrison-feig/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:bg-accent/90 transition-colors"
           >
             Get in Touch

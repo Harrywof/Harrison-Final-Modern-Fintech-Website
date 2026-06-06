@@ -59,7 +59,9 @@ export function Navigation() {
 
           {/* Contact Button - Desktop */}
           <Link
-            href="mailto:harrison.feig@gmail.com"
+            href="https://www.linkedin.com/in/harrison-feig/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex text-sm px-4 py-2 rounded-full border border-border hover:bg-secondary transition-colors"
           >
             Get in Touch
@@ -102,7 +104,9 @@ export function Navigation() {
                   </Link>
                 ))}
                 <Link
-                  href="mailto:harrison.feig@gmail.com"
+                  href="https://www.linkedin.com/in/harrison-feig/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-lg text-accent hover:text-accent/80 transition-colors"
                 >
                   Get in Touch

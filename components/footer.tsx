@@ -67,12 +67,6 @@ export function Footer() {
                 )
               })}
             </div>
-            <a
-              href="mailto:harrison.feig@gmail.com"
-              className="block text-sm text-muted-foreground hover:text-accent transition-colors"
-            >
-              harrison.feig@gmail.com
-            </a>
           </div>
         </div>
 
