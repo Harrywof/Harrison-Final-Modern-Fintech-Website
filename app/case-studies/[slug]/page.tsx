@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, ArrowUpRight, Calendar, Clock } from "lucide-react"
-import Image from "next/image"
 import { notFound } from "next/navigation"
 import { use } from "react"
 
@@ -17,7 +16,6 @@ const caseStudiesData: Record<string, {
   challenge: string
   solution: string
   impact: { metric: string; value: string }[]
-  image: string
   technologies: string[]
 }> = {
   "tokenization-framework": {
@@ -35,7 +33,6 @@ const caseStudiesData: Record<string, {
       { metric: "Strategic Partnerships", value: "EY + Others" },
       { metric: "Industry Impact", value: "Brokers, DTCC, Issuers" },
     ],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop",
     technologies: ["Strategic Analysis", "Market Modeling", "Executive Communication", "Scenario Planning"],
   },
   "digital-transfer-agent": {
@@ -53,7 +50,6 @@ const caseStudiesData: Record<string, {
       { metric: "Stakeholder Engagement", value: "High" },
       { metric: "Strategic Reference", value: "Yes" },
     ],
-    image: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=1200&h=800&fit=crop",
     technologies: ["Figma", "V0.dev", "Prototype Design", "User Experience"],
   },
   "corporate-actions": {
@@ -71,7 +67,6 @@ const caseStudiesData: Record<string, {
       { metric: "Leadership Audience", value: "SVP + Above" },
       { metric: "Innovation Impact", value: "High Priority" },
     ],
-    image: "https://images.unsplash.com/photo-1514432324607-2e1907c1b44e?w=1200&h=800&fit=crop",
     technologies: ["Strategic Research", "Market Analysis", "Technical Architecture", "Regulatory Analysis"],
   },
 }
@@ -130,23 +125,6 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
             <span className="text-muted-foreground">Role:</span>{" "}
             <span className="text-accent">{study.role}</span>
           </p>
-        </motion.div>
-      </section>
-
-      {/* Hero Image */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative aspect-[2/1] overflow-hidden rounded-lg bg-secondary"
-        >
-          <Image
-            src={study.image}
-            alt={study.title}
-            fill
-            className="object-cover"
-          />
         </motion.div>
       </section>
 

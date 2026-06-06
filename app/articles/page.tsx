@@ -8,7 +8,7 @@ const articles = [
   {
     slug: "battle-for-tokenized-equities",
     title: "The Battle for Tokenized Equities Has Begun",
-    excerpt: "Native issuance, the DTCC, and the broker — three players are racing to fill the vacuum in tokenized equities. Who wins, and what does true ownership look like in a tokenized world?",
+    excerpt: "Native issuance, the DTCC, and the broker are three players racing to fill the vacuum in tokenized equities. Who wins, and what does true ownership look like in a tokenized world?",
     date: "February 26, 2026",
     readTime: "4 min read",
     category: "Tokenization",
@@ -23,7 +23,7 @@ export default function ArticlesPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

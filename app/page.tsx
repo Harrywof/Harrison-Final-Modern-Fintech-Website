@@ -55,9 +55,10 @@ export default function HomePage() {
               <span className="text-accent italic font-serif">future of digital assets</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              I drive go-to-market strategy for tokenization and digital asset solutions at Broadridge, 
-              generating $1M+ in qualified pipeline and helping build the first on-chain proxy vote, 
-              connecting institutional finance with blockchain technology.
+              I drive go-to-market strategy for tokenization, digital asset, and SaaS solutions
+              serving financial institutions at Broadridge. My work has helped generate $1M+ in
+              qualified pipeline and support the first on-chain proxy vote, connecting institutional
+              finance with blockchain technology.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
@@ -93,8 +94,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="absolute -bottom-5 -left-5 bg-card border border-border rounded-xl px-5 py-4 shadow-sm">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Currently at</p>
-                <p className="text-sm font-medium">Broadridge Financial</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Current role</p>
+                <p className="text-sm font-medium">Business Development | Digital Assets & Tokenization</p>
               </div>
             </div>
           </motion.div>
@@ -206,39 +207,24 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="group"
             >
-              <Link href="/articles/rwa-tokenization" className="block space-y-4">
+              <a
+                href="https://medium.com/@harrison.feig/the-battle-for-tokenized-equities-had-begun-05264f653d67"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block space-y-4"
+              >
                 <p className="text-xs text-muted-foreground uppercase tracking-wider">
-                  May 2026
+                  February 26, 2026
                 </p>
                 <h3 className="text-xl font-medium group-hover:text-accent transition-colors">
-                  Real World Assets Meet Blockchain: The Tokenization Revolution
+                  The Battle for Tokenized Equities Has Begun
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Exploring how RWA tokenization is reshaping institutional investment and what 
-                  it means for the next decade of financial infrastructure at institutions like Broadridge.
+                  Native issuance, the DTCC, and the broker are racing to fill the vacuum in
+                  tokenized equities. A closer look at who wins and what true ownership could mean
+                  in a tokenized world.
                 </p>
-              </Link>
-            </motion.article>
-
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="group"
-            >
-              <Link href="/articles/corporate-actions-chain" className="block space-y-4">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider">
-                  April 2026
-                </p>
-                <h3 className="text-xl font-medium group-hover:text-accent transition-colors">
-                  Corporate Actions on Chain: A Strategic Imperative
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  A strategic analysis of how tokenized corporate actions could unlock efficiency 
-                  and innovation across the institutional finance ecosystem.
-                </p>
-              </Link>
+              </a>
             </motion.article>
           </div>
         </div>

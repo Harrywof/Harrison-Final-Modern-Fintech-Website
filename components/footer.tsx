@@ -1,10 +1,8 @@
 import Link from "next/link"
-import { Github, Linkedin, Twitter } from "lucide-react"
+import { Linkedin } from "lucide-react"
 
 const socialLinks = [
-  { href: "https://twitter.com", label: "Twitter", icon: Twitter },
-  { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
-  { href: "https://github.com", label: "GitHub", icon: Github },
+  { href: "https://www.linkedin.com/in/harrison-feig/", label: "LinkedIn", icon: Linkedin },
 ]
 
 const footerLinks = [

@@ -3,17 +3,16 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
-import Image from "next/image"
 
 const caseStudies = [
   {
-    slug: "tokenization-framework",
-    title: "Tokenization Strategic Framework for Institutional Clients",
-    category: "Corporate Strategy",
+    slug: "corporate-actions",
+    title: "Corporate Actions on Chain Strategic Initiative",
+    category: "Strategic Research",
     year: "2025",
-    description: "Developed comprehensive strategic operating models examining how tokenization impacts brokers, DTCC, and issuers. Built three future-state scenarios and platform-level BTCS integration roadmaps for Broadridge leadership.",
-    impact: ["3 Operating Models", "C-Suite Presentations", "EY Partnership"],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+    description: "Authored formal white paper exploring the strategic implications and implementation pathways for on-chain corporate actions, outlining Broadridge's strategic positioning and partnership opportunities.",
+    impact: ["White Paper", "Executive Briefing", "Innovation Lab"],
+    articleUrl: "https://www.broadridge.com/press-release/2026/broadridge-live-with-on-chain-governance",
   },
   {
     slug: "digital-transfer-agent",
@@ -22,16 +21,14 @@ const caseStudies = [
     year: "2025",
     description: "Designed and built interactive prototype demonstrating how tokenized issuance, ownership, and corporate actions function in a next-generation platform using Figma and V0.dev.",
     impact: ["Working Prototype", "Figma Design System", "Strategic Demos"],
-    image: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800&h=600&fit=crop",
   },
   {
-    slug: "corporate-actions",
-    title: "Corporate Actions on Chain Strategic Initiative",
-    category: "Strategic Research",
+    slug: "tokenization-framework",
+    title: "Tokenization Strategic Framework for Institutional Clients",
+    category: "Corporate Strategy",
     year: "2025",
-    description: "Authored formal white paper exploring the strategic implications and implementation pathways for on-chain corporate actions, outlining Broadridge's strategic positioning and partnership opportunities.",
-    impact: ["White Paper", "Executive Briefing", "Innovation Lab"],
-    image: "https://images.unsplash.com/photo-1514432324607-2e1907c1b44e?w=800&h=600&fit=crop",
+    description: "Developed comprehensive strategic operating models examining how tokenization impacts brokers, DTCC, and issuers. Built three future-state scenarios and platform-level BTCS integration roadmaps for Broadridge leadership.",
+    impact: ["3 Operating Models", "C-Suite Presentations", "EY Partnership"],
   },
   {
     slug: "rwa-tokenization",
@@ -40,7 +37,6 @@ const caseStudies = [
     year: "2025",
     description: "Co-developed white paper on yield advantages of tokenized real-world assets for SVP of Digital Strategy, analyzing institutional adoption drivers and market opportunities.",
     impact: ["White Paper", "SVP Briefing", "Market Analysis"],
-    image: "https://images.unsplash.com/photo-1553729780-eda2aaea5043?w=800&h=600&fit=crop",
   },
   {
     slug: "strategic-partnerships",
@@ -49,7 +45,6 @@ const caseStudies = [
     year: "2024-2025",
     description: "Supported VP of Innovation in evaluating and positioning strategic partnerships with Chainlink, LayerZero, and Avalanche. Developed ecosystem mapping, use case prioritization, and partner positioning frameworks.",
     impact: ["Ecosystem Mapping", "Partnership Framework", "Use Case Prioritization"],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
   },
   {
     slug: "financial-risk-mitigation",
@@ -58,7 +53,6 @@ const caseStudies = [
     year: "2024",
     description: "Designed and implemented automated PowerBI and Power Automate early-warning system for contract penalties, creating quantified financial risk mitigation worth $2M+ across ICS operations.",
     impact: ["$2M Risk Mitigation", "Automated Workflows", "Executive Dashboard"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
   },
 ]
 
@@ -68,7 +62,7 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -123,33 +117,21 @@ export default function CaseStudiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Link
-                href={`/case-studies/${study.slug}`}
-                className="group grid lg:grid-cols-2 gap-8 items-center"
-              >
-                {/* Image */}
-                <div className={`relative aspect-[4/3] overflow-hidden rounded-lg bg-secondary ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-
-                {/* Content */}
-                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className="group block p-6 md:p-8 border border-border rounded-lg hover:border-accent/50 hover:bg-secondary/30 transition-all">
+                <div className="space-y-6">
                   <div className="flex items-center gap-4 text-xs text-muted-foreground uppercase tracking-wider">
                     <span className="text-accent">{study.category}</span>
                     <span className="w-1 h-1 rounded-full bg-border" />
                     <span>{study.year}</span>
                   </div>
                   
-                  <h2 className="text-2xl md:text-3xl font-medium group-hover:text-accent transition-colors flex items-center gap-3">
-                    {study.title}
-                    <ArrowUpRight className="w-5 h-5 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
-                  </h2>
+                  <Link
+                    href={`/case-studies/${study.slug}`}
+                    className="inline-flex items-start gap-3 text-2xl md:text-3xl font-medium hover:text-accent transition-colors"
+                  >
+                    <span>{study.title}</span>
+                    <ArrowUpRight className="w-5 h-5 mt-2 flex-shrink-0" />
+                  </Link>
                   <p className="text-muted-foreground leading-relaxed">
                     {study.description}
                   </p>
@@ -165,8 +147,19 @@ export default function CaseStudiesPage() {
                       </span>
                     ))}
                   </div>
+                  {"articleUrl" in study && study.articleUrl ? (
+                    <a
+                      href={study.articleUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-accent hover:underline"
+                    >
+                      Read the Broadridge announcement
+                      <ArrowUpRight className="w-4 h-4" />
+                    </a>
+                  ) : null}
                 </div>
-              </Link>
+              </div>
             </motion.article>
           ))}
         </div>

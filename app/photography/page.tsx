@@ -8,91 +8,91 @@ import Image from "next/image"
 const photos = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop",
-    alt: "Mountain landscape at sunrise",
-    category: "Landscapes",
-    location: "Swiss Alps",
+    src: "/photos/dog-es.jpg",
+    alt: "Dog sitting against a blue wall in El Salvador",
+    category: "Travel",
+    location: "El Salvador",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=1200&fit=crop",
-    alt: "Urban skyline at night",
-    category: "Urban",
-    location: "New York City",
+    src: "/photos/dsc_0635.jpg",
+    alt: "Quiet street with green hills in the background",
+    category: "Travel",
+    location: "El Salvador",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&h=800&fit=crop",
-    alt: "Traditional temple architecture",
+    src: "/photos/esshop.jpg",
+    alt: "Colorful neighborhood storefront in El Salvador",
     category: "Travel",
-    location: "Kyoto, Japan",
+    location: "El Salvador",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&h=800&fit=crop",
-    alt: "Snowy mountain peak",
+    src: "/photos/esvolcano.jpg",
+    alt: "Volcanic crater lake under low clouds",
     category: "Landscapes",
-    location: "Mount Rainier",
+    location: "El Salvador",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=1200&fit=crop",
-    alt: "City street at dusk",
-    category: "Urban",
-    location: "Paris, France",
+    src: "/photos/greececar.jpg",
+    alt: "Car driving along a coastal road in Greece",
+    category: "Travel",
+    location: "Greece",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=800&fit=crop",
-    alt: "Tropical beach at sunset",
+    src: "/photos/greecefilm.jpg",
+    alt: "Cliffs and turquoise water on the Greek coast",
     category: "Landscapes",
-    location: "Maldives",
+    location: "Greece",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
-    alt: "Downtown aerial view",
-    category: "Urban",
-    location: "Chicago",
+    src: "/photos/mangoes.jpg",
+    alt: "Mangoes growing on a tree",
+    category: "Travel",
+    location: "El Salvador",
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=1200&fit=crop",
-    alt: "Dramatic mountain range",
+    src: "/photos/nhmountian.jpg",
+    alt: "Mountain valley view in New Hampshire",
     category: "Landscapes",
-    location: "Patagonia",
+    location: "New Hampshire",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&h=800&fit=crop",
-    alt: "Iconic tower at golden hour",
+    src: "/photos/romaniarainbow.jpg",
+    alt: "Rainbow over a Romanian hillside town",
     category: "Travel",
-    location: "Paris, France",
+    location: "Romania",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&h=800&fit=crop",
-    alt: "Misty forest morning",
-    category: "Landscapes",
-    location: "Pacific Northwest",
+    src: "/photos/romaniasibiu.jpg",
+    alt: "Historic rooftops and streets in Sibiu",
+    category: "Street",
+    location: "Sibiu, Romania",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=800&h=1200&fit=crop",
-    alt: "Historic clock tower",
-    category: "Urban",
-    location: "London, UK",
+    src: "/photos/romaniasunset.jpg",
+    alt: "Sunset over rooftops in Romania",
+    category: "Street",
+    location: "Romania",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=800&fit=crop",
-    alt: "Valley with winding river",
-    category: "Landscapes",
-    location: "Iceland",
+    src: "/photos/romaniatown.jpg",
+    alt: "Town square scene in Romania",
+    category: "Street",
+    location: "Romania",
   },
 ]
 
-const categories = ["All", "Landscapes", "Urban", "Travel"]
+const categories = ["All", "Travel", "Landscapes", "Street"]
 
 export default function PhotographyPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -120,7 +120,7 @@ export default function PhotographyPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -135,8 +135,9 @@ export default function PhotographyPage() {
             <span className="text-accent italic font-serif">moments</span>
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Beyond fintech, I find clarity behind a camera. These images represent quiet moments 
-            between the noise—landscapes, cityscapes, and the places that inspire perspective.
+            Outside of fintech, I enjoy travel and photography. I like bringing a camera along when
+            I am exploring new places, especially cities, coastlines, and landscapes that make me
+            slow down a bit.
           </p>
         </motion.div>
       </section>
@@ -280,15 +281,7 @@ export default function PhotographyPage() {
           <div className="max-w-2xl">
             <h2 className="text-sm uppercase tracking-wider text-accent mb-4">Equipment</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Most of these images were captured with a Sony A7R IV and a collection of prime lenses. 
-              I believe in traveling light—usually just a 35mm and 85mm cover most situations.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              For prints or licensing inquiries, please{" "}
-              <a href="mailto:hello@alexchen.dev" className="text-accent hover:underline">
-                get in touch
-              </a>
-              .
+              Nikon D3300, Pentax K1000, Canon AF35ML
             </p>
           </div>
         </div>
