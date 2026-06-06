@@ -1,0 +1,202 @@
+"use client"
+
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
+
+const caseStudies = [
+  {
+    slug: "tokenization-framework",
+    title: "Tokenization Strategic Framework for Institutional Clients",
+    category: "Corporate Strategy",
+    year: "2025",
+    description: "Developed comprehensive strategic operating models examining how tokenization impacts brokers, DTCC, and issuers. Built three future-state scenarios and platform-level BTCS integration roadmaps for Broadridge leadership.",
+    impact: ["3 Operating Models", "C-Suite Presentations", "EY Partnership"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+  },
+  {
+    slug: "digital-transfer-agent",
+    title: "Digital Transfer Agent Prototype & Platform Design",
+    category: "Product Design",
+    year: "2025",
+    description: "Designed and built interactive prototype demonstrating how tokenized issuance, ownership, and corporate actions function in a next-generation platform using Figma and V0.dev.",
+    impact: ["Working Prototype", "Figma Design System", "Strategic Demos"],
+    image: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800&h=600&fit=crop",
+  },
+  {
+    slug: "corporate-actions",
+    title: "Corporate Actions on Chain Strategic Initiative",
+    category: "Strategic Research",
+    year: "2025",
+    description: "Authored formal white paper exploring the strategic implications and implementation pathways for on-chain corporate actions, outlining Broadridge's strategic positioning and partnership opportunities.",
+    impact: ["White Paper", "Executive Briefing", "Innovation Lab"],
+    image: "https://images.unsplash.com/photo-1514432324607-2e1907c1b44e?w=800&h=600&fit=crop",
+  },
+  {
+    slug: "rwa-tokenization",
+    title: "Real World Assets Tokenization Research",
+    category: "Strategic Research",
+    year: "2025",
+    description: "Co-developed white paper on yield advantages of tokenized real-world assets for SVP of Digital Strategy, analyzing institutional adoption drivers and market opportunities.",
+    impact: ["White Paper", "SVP Briefing", "Market Analysis"],
+    image: "https://images.unsplash.com/photo-1553729780-eda2aaea5043?w=800&h=600&fit=crop",
+  },
+  {
+    slug: "strategic-partnerships",
+    title: "Ecosystem Partnership Evaluation Program",
+    category: "Business Development",
+    year: "2024-2025",
+    description: "Supported VP of Innovation in evaluating and positioning strategic partnerships with Chainlink, LayerZero, and Avalanche. Developed ecosystem mapping, use case prioritization, and partner positioning frameworks.",
+    impact: ["Ecosystem Mapping", "Partnership Framework", "Use Case Prioritization"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+  },
+  {
+    slug: "financial-risk-mitigation",
+    title: "Automated Financial Risk Mitigation System",
+    category: "Financial Modeling",
+    year: "2024",
+    description: "Designed and implemented automated PowerBI and Power Automate early-warning system for contract penalties, creating quantified financial risk mitigation worth $2M+ across ICS operations.",
+    impact: ["$2M Risk Mitigation", "Automated Workflows", "Executive Dashboard"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+  },
+]
+
+const categories = ["All", "Corporate Strategy", "Product Design", "Strategic Research", "Business Development", "Financial Modeling"]
+
+export default function CaseStudiesPage() {
+  return (
+    <div className="min-h-screen pt-20">
+      {/* Header */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl"
+        >
+          <p className="text-accent text-sm tracking-wider uppercase mb-4">
+            Case Studies
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight mb-6">
+            Strategic initiatives in{" "}
+            <span className="text-accent italic font-serif">tokenization & digital assets</span>
+          </h1>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            A selection of strategic projects I&apos;ve led at Broadridge, including corporate strategy development, 
+            institutional partnerships, and platform design initiatives in the digital assets space.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Filter */}
+      <section className="border-y border-border/50 bg-secondary/30">
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <div className="flex flex-wrap gap-3">
+            {categories.map((category, index) => (
+              <motion.button
+                key={category}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                className={`px-4 py-2 text-xs tracking-wide uppercase border rounded-full transition-colors ${
+                  category === "All"
+                    ? "bg-accent text-accent-foreground border-accent"
+                    : "border-border text-muted-foreground hover:border-accent/50 hover:text-foreground"
+                }`}
+              >
+                {category}
+              </motion.button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <div className="grid gap-16">
+          {caseStudies.map((study, index) => (
+            <motion.article
+              key={study.slug}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <Link
+                href={`/case-studies/${study.slug}`}
+                className="group grid lg:grid-cols-2 gap-8 items-center"
+              >
+                {/* Image */}
+                <div className={`relative aspect-[4/3] overflow-hidden rounded-lg bg-secondary ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <Image
+                    src={study.image}
+                    alt={study.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+
+                {/* Content */}
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground uppercase tracking-wider">
+                    <span className="text-accent">{study.category}</span>
+                    <span className="w-1 h-1 rounded-full bg-border" />
+                    <span>{study.year}</span>
+                  </div>
+                  
+                  <h2 className="text-2xl md:text-3xl font-medium group-hover:text-accent transition-colors flex items-center gap-3">
+                    {study.title}
+                    <ArrowUpRight className="w-5 h-5 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {study.description}
+                  </p>
+
+                  {/* Impact Metrics */}
+                  <div className="flex flex-wrap gap-3">
+                    {study.impact.map((metric) => (
+                      <span
+                        key={metric}
+                        className="px-4 py-2 text-sm bg-secondary rounded-full"
+                      >
+                        {metric}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-border/50 bg-secondary/30">
+        <div className="max-w-6xl mx-auto px-6 py-24 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-light tracking-tight mb-4">
+              Want to discuss tokenization strategy?
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+              {"I'm always open to discussing institutional tokenization, digital assets, and fintech innovation."}
+            </p>
+            <a
+              href="mailto:harrison.feig@gmail.com"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:bg-accent/90 transition-colors"
+            >
+              Get in Touch
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+}
