@@ -30,33 +30,9 @@ const caseStudies = [
     description: "Developed comprehensive strategic operating models examining how tokenization impacts brokers, DTCC, and issuers. Built three future-state scenarios and platform-level BTCS integration roadmaps for Broadridge leadership.",
     impact: ["3 Operating Models", "C-Suite Presentations", "EY Partnership"],
   },
-  {
-    slug: "rwa-tokenization",
-    title: "Real World Assets Tokenization Research",
-    category: "Strategic Research",
-    year: "2025",
-    description: "Co-developed white paper on yield advantages of tokenized real-world assets for SVP of Digital Strategy, analyzing institutional adoption drivers and market opportunities.",
-    impact: ["White Paper", "SVP Briefing", "Market Analysis"],
-  },
-  {
-    slug: "strategic-partnerships",
-    title: "Ecosystem Partnership Evaluation Program",
-    category: "Business Development",
-    year: "2024-2025",
-    description: "Supported VP of Innovation in evaluating and positioning strategic partnerships with Chainlink, LayerZero, and Avalanche. Developed ecosystem mapping, use case prioritization, and partner positioning frameworks.",
-    impact: ["Ecosystem Mapping", "Partnership Framework", "Use Case Prioritization"],
-  },
-  {
-    slug: "financial-risk-mitigation",
-    title: "Automated Financial Risk Mitigation System",
-    category: "Financial Modeling",
-    year: "2024",
-    description: "Designed and implemented automated PowerBI and Power Automate early-warning system for contract penalties, creating quantified financial risk mitigation worth $2M+ across ICS operations.",
-    impact: ["$2M Risk Mitigation", "Automated Workflows", "Executive Dashboard"],
-  },
 ]
 
-const categories = ["All", "Corporate Strategy", "Product Design", "Strategic Research", "Business Development", "Financial Modeling"]
+const categories = ["All", "Corporate Strategy", "Product Design", "Strategic Research"]
 
 export default function CaseStudiesPage() {
   return (
