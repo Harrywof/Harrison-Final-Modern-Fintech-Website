@@ -116,39 +116,6 @@ export default function ArticlesPage() {
         </motion.div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="border-t border-border/50 bg-secondary/30">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-xl mx-auto text-center"
-          >
-            <h2 className="text-2xl md:text-3xl font-light tracking-tight mb-4">
-              Stay Updated
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Get notified when I publish new pieces on tokenization, digital assets, and 
-              market structure. No spam, unsubscribe anytime.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-1 px-4 py-3 bg-input border border-border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:bg-accent/90 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </motion.div>
-        </div>
-      </section>
     </div>
   )
 }

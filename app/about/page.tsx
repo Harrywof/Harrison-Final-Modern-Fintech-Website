@@ -43,10 +43,10 @@ const experience = [
 
 const education = [
   {
-    degree: "B.S. Business Management (Marketing Specialization)",
+    degree: "B.S. Business Management",
     school: "Stony Brook University",
     year: "2023",
-    honors: "summa cum laude, 3.89 GPA"
+    honors: "summa cum laude"
   },
   {
     degree: "B.A. Psychology",
