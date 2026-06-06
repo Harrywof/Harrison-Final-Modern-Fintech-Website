@@ -76,7 +76,7 @@ export function Footer() {
             {new Date().getFullYear()} Harrison Feig. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
-            Built with precision in Queens, NY
+            Built with precision
           </p>
         </div>
       </div>

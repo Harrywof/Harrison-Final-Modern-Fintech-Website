@@ -117,8 +117,8 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-card border border-border p-6 rounded-lg max-w-xs shadow-lg">
-              <p className="text-sm text-muted-foreground">Based in</p>
-              <p className="text-lg font-medium">Queens, NY</p>
+              <p className="text-sm text-muted-foreground">Available for</p>
+              <p className="text-lg font-medium">Fintech & digital assets opportunities</p>
             </div>
           </motion.div>
         </div>
