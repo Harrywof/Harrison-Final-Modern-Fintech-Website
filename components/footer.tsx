@@ -15,8 +15,8 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-border/50 bg-card/50">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="text-xl font-medium tracking-tight">
@@ -71,7 +71,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-10 pt-6 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
             {new Date().getFullYear()} Harrison Feig. All rights reserved.
           </p>

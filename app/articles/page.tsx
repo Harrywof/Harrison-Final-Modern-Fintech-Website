@@ -23,7 +23,7 @@ export default function ArticlesPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,8 +48,8 @@ export default function ArticlesPage() {
 
       {/* Featured Articles */}
       <section className="border-t border-border/50 bg-secondary/30">
-        <div className="max-w-6xl mx-auto px-6 py-16">
-          <p className="text-accent text-sm tracking-wider uppercase mb-8">Featured</p>
+        <div className="max-w-6xl mx-auto px-6 py-10 md:py-12">
+          <p className="text-accent text-sm tracking-wider uppercase mb-6">Featured</p>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredArticles.map((article, index) => (
               <motion.article
@@ -88,7 +88,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Read More on Medium */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 py-10 md:py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

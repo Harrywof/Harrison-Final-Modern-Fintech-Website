@@ -73,8 +73,8 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,12 +83,12 @@ export default function AboutPage() {
             <p className="text-accent text-sm tracking-wider uppercase mb-4">
               About
             </p>
-            <h1 className="text-3xl md:text-4xl font-light leading-tight tracking-tight mb-8">
+            <h1 className="text-3xl md:text-4xl font-light leading-tight tracking-tight mb-6">
               Strategy professional at the intersection of{" "}
               <span className="text-accent italic font-serif">finance</span> and{" "}
               <span className="text-accent italic font-serif">tokenization</span>
             </h1>
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
                 I&apos;m Harrison Feig, a business development professional driving digital assets and tokenization initiatives at Broadridge Financial. I work on go-to-market strategy for blockchain products, and have generated $1M+ in qualified pipeline while supporting strategic partnership discussions with Chainlink, DTCC, and S&P.
               </p>
@@ -126,13 +126,13 @@ export default function AboutPage() {
 
       {/* Experience Section */}
       <section className="border-t border-border/50">
-        <div className="max-w-6xl mx-auto px-6 py-24">
+        <div className="max-w-6xl mx-auto px-6 py-12 md:py-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mb-16"
+            className="mb-10"
           >
             <p className="text-accent text-sm tracking-wider uppercase mb-2">Career</p>
             <h2 className="text-2xl md:text-3xl font-light tracking-tight">
@@ -207,8 +207,8 @@ export default function AboutPage() {
 
       {/* Education & Skills */}
       <section className="border-t border-border/50 bg-secondary/30">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <div className="grid md:grid-cols-2 gap-16">
+        <div className="max-w-6xl mx-auto px-6 py-12 md:py-14">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-12">
             {/* Education */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -254,54 +254,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="border-t border-border/50">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-16"
-          >
-            <p className="text-accent text-sm tracking-wider uppercase mb-2">Philosophy</p>
-            <h2 className="text-2xl md:text-3xl font-light tracking-tight">
-              What I Believe
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Clarity in Complexity",
-                description: "Tokenization solves real problems in finance. My job is to explain why in terms institutional leaders understand.",
-              },
-              {
-                title: "Strategy Drives Implementation",
-                description: "The best technology fails without proper strategy. I focus on building comprehensive roadmaps, not just point solutions.",
-              },
-              {
-                title: "Bridge the Gap",
-                description: "The future isn't about replacing traditional finance. It's about enhancing it with new capabilities and efficiency.",
-              },
-            ].map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 border border-border rounded-lg"
-              >
-                <h3 className="text-lg font-medium mb-3">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

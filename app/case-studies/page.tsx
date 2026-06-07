@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -83,8 +83,8 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="grid gap-16">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-14">
+        <div className="grid gap-8">
           {caseStudies.map((study, index) => (
             <motion.article
               key={study.slug}
@@ -94,7 +94,7 @@ export default function CaseStudiesPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="group block p-6 md:p-8 border border-border rounded-lg hover:border-accent/50 hover:bg-secondary/30 transition-all">
-                <div className="space-y-6">
+                <div className="space-y-5">
                   <div className="flex items-center gap-4 text-xs text-muted-foreground uppercase tracking-wider">
                     <span className="text-accent">{study.category}</span>
                     <span className="w-1 h-1 rounded-full bg-border" />
@@ -143,7 +143,7 @@ export default function CaseStudiesPage() {
 
       {/* CTA */}
       <section className="border-t border-border/50 bg-secondary/30">
-        <div className="max-w-6xl mx-auto px-6 py-24 text-center">
+        <div className="max-w-6xl mx-auto px-6 py-12 md:py-14 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -39,8 +39,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20 md:py-28">
-        <div className="grid lg:grid-cols-[1fr_340px] gap-16 items-center">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-14">
+        <div className="grid lg:grid-cols-[1fr_340px] gap-10 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,8 +122,8 @@ export default function HomePage() {
       </section>
 
       {/* Featured Work */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="flex items-end justify-between mb-12">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-14">
+        <div className="flex items-end justify-between mb-8">
           <div>
             <p className="text-accent text-sm tracking-wider uppercase mb-2">Selected Work</p>
             <h2 className="text-2xl md:text-3xl font-light tracking-tight">
@@ -182,8 +182,8 @@ export default function HomePage() {
 
       {/* Latest Articles Preview */}
       <section className="border-t border-border/50 bg-secondary/30">
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <div className="flex items-end justify-between mb-12">
+        <div className="max-w-6xl mx-auto px-6 py-12 md:py-14">
+          <div className="flex items-end justify-between mb-8">
             <div>
               <p className="text-accent text-sm tracking-wider uppercase mb-2">Insights</p>
               <h2 className="text-2xl md:text-3xl font-light tracking-tight">
@@ -231,7 +231,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-14">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

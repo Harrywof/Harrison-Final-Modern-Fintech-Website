@@ -120,7 +120,7 @@ export default function PhotographyPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Header */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-6xl mx-auto px-6 py-10 md:py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ export default function PhotographyPage() {
       </section>
 
       {/* Photo Grid */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-12 md:py-16">
         <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
@@ -276,7 +276,7 @@ export default function PhotographyPage() {
 
       {/* Equipment Note */}
       <section className="border-t border-border/50 bg-card/30">
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 py-10 md:py-12">
           <div className="max-w-2xl">
             <h2 className="text-sm uppercase tracking-wider text-accent mb-4">Equipment</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
