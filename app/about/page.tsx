@@ -46,13 +46,13 @@ const education = [
     degree: "B.S. Business Management",
     school: "Stony Brook University",
     year: "2023",
-    honors: "summa cum laude"
+    honors: "summa cum laude; Business Honors Program"
   },
   {
     degree: "B.A. Psychology",
     school: "Stony Brook University",
     year: "2023",
-    honors: "Business Honors Program"
+    honors: ""
   },
 ]
 
@@ -83,7 +83,7 @@ export default function AboutPage() {
             <p className="text-accent text-sm tracking-wider uppercase mb-4">
               About
             </p>
-            <h1 className="text-4xl md:text-5xl font-light leading-tight tracking-tight mb-8">
+            <h1 className="text-3xl md:text-4xl font-light leading-tight tracking-tight mb-8">
               Strategy professional at the intersection of{" "}
               <span className="text-accent italic font-serif">finance</span> and{" "}
               <span className="text-accent italic font-serif">tokenization</span>
@@ -135,7 +135,7 @@ export default function AboutPage() {
             className="mb-16"
           >
             <p className="text-accent text-sm tracking-wider uppercase mb-2">Career</p>
-            <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-light tracking-tight">
               Experience
             </h2>
           </motion.div>
@@ -223,7 +223,7 @@ export default function AboutPage() {
                   <div key={edu.degree} className="space-y-1">
                     <p className="font-medium">{edu.degree}</p>
                     <p className="text-muted-foreground text-sm">{edu.school}</p>
-                    <p className="text-muted-foreground text-xs">{edu.honors}</p>
+                    {edu.honors ? <p className="text-muted-foreground text-xs">{edu.honors}</p> : null}
                     <p className="text-muted-foreground text-xs">{edu.year}</p>
                   </div>
                 ))}
@@ -265,7 +265,7 @@ export default function AboutPage() {
             className="mb-16"
           >
             <p className="text-accent text-sm tracking-wider uppercase mb-2">Philosophy</p>
-            <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-light tracking-tight">
               What I Believe
             </h2>
           </motion.div>

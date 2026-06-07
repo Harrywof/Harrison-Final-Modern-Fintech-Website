@@ -49,7 +49,7 @@ export default function HomePage() {
             <p className="text-accent text-sm tracking-wider uppercase mb-4">
               Fintech & Tokenization Strategist
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-tight text-balance">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-balance">
               Bridging{" "}
               <span className="text-accent italic font-serif">traditional finance</span> with the{" "}
               <span className="text-accent italic font-serif">future of digital assets</span>
@@ -126,7 +126,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <p className="text-accent text-sm tracking-wider uppercase mb-2">Selected Work</p>
-            <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-light tracking-tight">
               Featured Projects
             </h2>
           </div>
@@ -186,7 +186,7 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-12">
             <div>
               <p className="text-accent text-sm tracking-wider uppercase mb-2">Insights</p>
-              <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-light tracking-tight">
                 Latest Thinking
               </h2>
             </div>
@@ -239,7 +239,7 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6">
+          <h2 className="text-2xl md:text-3xl font-light tracking-tight mb-6">
             {"Let's explore the future of institutional finance"}
           </h2>
           <p className="text-muted-foreground mb-8">

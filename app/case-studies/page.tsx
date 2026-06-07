@@ -48,7 +48,7 @@ export default function CaseStudiesPage() {
           <p className="text-accent text-sm tracking-wider uppercase mb-4">
             Case Studies
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6">
             Strategic initiatives in{" "}
             <span className="text-accent italic font-serif">tokenization & digital assets</span>
           </h1>
@@ -103,7 +103,7 @@ export default function CaseStudiesPage() {
                   
                   <Link
                     href={`/case-studies/${study.slug}`}
-                    className="inline-flex items-start gap-3 text-2xl md:text-3xl font-medium hover:text-accent transition-colors"
+                    className="inline-flex items-start gap-3 text-xl md:text-2xl font-medium hover:text-accent transition-colors"
                   >
                     <span>{study.title}</span>
                     <ArrowUpRight className="w-5 h-5 mt-2 flex-shrink-0" />
@@ -150,7 +150,7 @@ export default function CaseStudiesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl md:text-3xl font-light tracking-tight mb-4">
+            <h2 className="text-xl md:text-2xl font-light tracking-tight mb-4">
               Want to discuss tokenization strategy?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">

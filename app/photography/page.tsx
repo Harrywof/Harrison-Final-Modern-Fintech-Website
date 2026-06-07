@@ -130,7 +130,7 @@ export default function PhotographyPage() {
           <p className="text-accent text-sm tracking-wider uppercase mb-4">
             Photography
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6">
             Capturing{" "}
             <span className="text-accent italic font-serif">moments</span>
           </h1>
@@ -168,9 +168,9 @@ export default function PhotographyPage() {
 
       {/* Photo Grid */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <motion.div 
+        <motion.div
           layout
-          className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           <AnimatePresence mode="popLayout">
             {filteredPhotos.map((photo, index) => (
@@ -181,18 +181,17 @@ export default function PhotographyPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="break-inside-avoid"
               >
                 <button
                   onClick={() => openLightbox(index)}
-                  className="group relative block w-full overflow-hidden rounded-lg bg-secondary cursor-pointer"
+                  className="group relative block w-full overflow-hidden rounded-lg bg-secondary cursor-pointer aspect-[4/3]"
                 >
                   <Image
                     src={photo.src}
                     alt={photo.alt}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4">

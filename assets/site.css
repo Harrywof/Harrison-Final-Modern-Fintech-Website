@@ -156,8 +156,8 @@ h1 {
   max-width: 900px;
   margin-bottom: 20px;
   color: var(--navy);
-  font-size: clamp(3.1rem, 7.4vw, 6.5rem);
-  line-height: 0.95;
+  font-size: clamp(2.45rem, 5.8vw, 5rem);
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -310,7 +310,12 @@ h1 {
 }
 
 .page-hero {
-  padding: 76px 0 48px;
+  padding: 64px 0 44px;
+}
+
+.page-hero h1 {
+  max-width: 820px;
+  font-size: clamp(2.25rem, 4.8vw, 4.35rem);
 }
 
 .section {
@@ -591,7 +596,7 @@ h3 {
 
 .photo-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -605,9 +610,24 @@ h3 {
 
 .photo-card img {
   width: 100%;
-  height: 360px;
+  aspect-ratio: 4 / 3;
+  height: auto;
   display: block;
   object-fit: cover;
+}
+
+.photo-card a {
+  display: block;
+  overflow: hidden;
+}
+
+.photo-card a img {
+  transition: transform 180ms ease;
+}
+
+.photo-card a:hover img,
+.photo-card a:focus-visible img {
+  transform: scale(1.025);
 }
 
 .photo-card .caption {
@@ -915,9 +935,12 @@ footer {
   .bp-hero-grid,
   .bp-steps-layout,
   .bp-custom-grid,
-  .bp-cta,
-  .photo-grid {
+  .bp-cta {
     grid-template-columns: 1fr;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .grid-3,
@@ -966,7 +989,11 @@ footer {
   }
 
   h1 {
-    font-size: clamp(3rem, 17vw, 5rem);
+    font-size: clamp(2.45rem, 13vw, 4.25rem);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.15rem, 11vw, 3.5rem);
   }
 
   .portrait-frame {
@@ -1015,7 +1042,12 @@ footer {
   }
 
   .photo-card img {
-    height: 260px;
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
   }
 
   .bp-hero {

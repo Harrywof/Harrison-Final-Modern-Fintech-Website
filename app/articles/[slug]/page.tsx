@@ -89,7 +89,7 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight mb-6 text-balance">
+          <h1 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-balance">
             {article.title}
           </h1>
 

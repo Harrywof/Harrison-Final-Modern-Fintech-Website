@@ -33,7 +33,7 @@ export default function ArticlesPage() {
           <p className="text-accent text-sm tracking-wider uppercase mb-4">
             Articles
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-6">
             Thoughts on{" "}
             <span className="text-accent italic font-serif">fintech</span> and{" "}
             <span className="text-accent italic font-serif">beyond</span>
