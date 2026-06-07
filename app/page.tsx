@@ -10,19 +10,19 @@ const featuredWork = [
     title: "Tokenization Strategic Framework for Institutional Clients",
     category: "Corporate Strategy",
     description: "Developed strategic operating models for how tokenization impacts brokers, DTCC, and issuers. Built BTCS integration platform roadmaps.",
-    href: "/case-studies/tokenization-framework",
+    href: "/case-studies",
   },
   {
     title: "Digital Transfer Agent Prototype & Platform Design",
     category: "Product Design",
     description: "Designed and built working prototype demonstrating tokenized issuance, ownership, and corporate actions in next-generation platform.",
-    href: "/case-studies/digital-transfer-agent",
+    href: "/case-studies",
   },
   {
     title: "Corporate Actions on Chain Strategic Initiative",
     category: "Strategic Research",
-    description: "Authored formal white paper exploring on-chain corporate actions, outlining Broadridge's strategic options for institutional adoption.",
-    href: "/case-studies/corporate-actions",
+    description: "Was part of the team that developed and implemented on-chain governance for tokenized equities.",
+    href: "/case-studies",
   },
 ]
 

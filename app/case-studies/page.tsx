@@ -10,7 +10,7 @@ const caseStudies = [
     title: "Corporate Actions on Chain Strategic Initiative",
     category: "Strategic Research",
     year: "2025",
-    description: "Authored formal white paper exploring the strategic implications and implementation pathways for on-chain corporate actions, outlining Broadridge's strategic positioning and partnership opportunities.",
+    description: "Was part of the team that developed and implemented on-chain governance for tokenized equities, helping connect institutional corporate actions with blockchain-based market infrastructure.",
     impact: ["White Paper", "Executive Briefing", "Innovation Lab"],
     articleUrl: "https://www.broadridge.com/press-release/2026/broadridge-live-with-on-chain-governance",
   },
@@ -53,7 +53,7 @@ export default function CaseStudiesPage() {
             <span className="text-accent italic font-serif">tokenization & digital assets</span>
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            A selection of strategic projects I&apos;ve led at Broadridge, including corporate strategy development, 
+            A selection of strategic projects I&apos;ve worked on at Broadridge, including corporate strategy development, 
             institutional partnerships, and platform design initiatives in the digital assets space.
           </p>
         </motion.div>
@@ -102,7 +102,7 @@ export default function CaseStudiesPage() {
                   </div>
                   
                   <Link
-                    href={`/case-studies/${study.slug}`}
+                    href="/case-studies"
                     className="inline-flex items-start gap-3 text-xl md:text-2xl font-medium hover:text-accent transition-colors"
                   >
                     <span>{study.title}</span>

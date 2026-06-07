@@ -10,7 +10,7 @@ const experience = [
     role: "Business Development | Digital Assets & Tokenization",
     company: "Broadridge Financial",
     companyUrl: "https://broadridge.com",
-    description: "Spearhead go-to-market strategy and outreach for digital asset solutions including Shadow (post-trade) and ClearFi (digital disclosure hub). Generated $1M+ in qualified pipeline and supported strategic partnership discussions with Chainlink, DTCC, and S&P. Part of the team that developed the first on-chain proxy vote, and currently leading development of an MVP for a tokenized corporate actions platform.",
+    description: "Work on go-to-market strategy and outreach for digital asset solutions including Shadow (post-trade) and ClearFi (digital disclosure hub). Generated $1M+ in qualified pipeline and supported strategic partnership discussions with Chainlink, DTCC, and S&P. Part of the team that developed the first on-chain proxy vote, and currently supporting development of an MVP for a tokenized corporate actions platform.",
     skills: ["Go-to-Market", "Digital Assets", "Tokenization", "On-Chain Proxy Voting", "Pipeline Development"],
   },
   {
@@ -90,7 +90,7 @@ export default function AboutPage() {
             </h1>
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                I&apos;m Harrison Feig, a business development professional driving digital assets and tokenization initiatives at Broadridge Financial. I lead go-to-market strategy for blockchain products, and have generated $1M+ in qualified pipeline while supporting strategic partnership discussions with Chainlink, DTCC, and S&P.
+                I&apos;m Harrison Feig, a business development professional driving digital assets and tokenization initiatives at Broadridge Financial. I work on go-to-market strategy for blockchain products, and have generated $1M+ in qualified pipeline while supporting strategic partnership discussions with Chainlink, DTCC, and S&P.
               </p>
               <p>
                 I was part of the team that developed the first on-chain proxy vote, a milestone in bringing institutional corporate actions to blockchain. My background combines experience in government policy, sales strategy, and hands-on product design, allowing me to understand both the regulatory landscape and the technical innovation driving institutional adoption of digital assets.
