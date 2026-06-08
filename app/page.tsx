@@ -13,9 +13,9 @@ const featuredWork = [
     href: "/case-studies",
   },
   {
-    title: "Digital Transfer Agent Prototype & Platform Design",
+    title: "Digital Asset Servicing Prototype",
     category: "Product Design",
-    description: "Designed and built working prototype demonstrating tokenized issuance, ownership, and corporate actions in next-generation platform.",
+    description: "Developed an internal proof of concept demonstrating tokenized issuance, ownership records, and corporate action workflows within a digital transfer agent framework.",
     href: "/case-studies",
   },
   {

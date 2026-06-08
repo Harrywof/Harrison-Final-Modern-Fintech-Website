@@ -16,10 +16,10 @@ const caseStudies = [
   },
   {
     slug: "digital-transfer-agent",
-    title: "Digital Transfer Agent Prototype & Platform Design",
+    title: "Digital Asset Servicing Prototype",
     category: "Product Design",
     year: "2025",
-    description: "Designed and built interactive prototype demonstrating how tokenized issuance, ownership, and corporate actions function in a next-generation platform using Figma and V0.dev.",
+    description: "Developed an internal proof of concept demonstrating how tokenized issuance, ownership records, and corporate action workflows could be modeled within a digital transfer agent framework.",
     impact: ["Working Prototype", "Figma Design System", "Strategic Demos"],
   },
   {
