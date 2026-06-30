@@ -6,6 +6,16 @@ import { ArrowUpRight } from "lucide-react"
 
 const articles = [
   {
+    slug: "on-chain-advantage-tokenized-rwas",
+    title: "The On-Chain Advantage of Tokenized RWAs",
+    excerpt: "A look at how real-world assets can benefit from on-chain infrastructure, including improved transparency, programmability, and more efficient asset servicing.",
+    date: "Recent",
+    readTime: "4 min read",
+    category: "Tokenization",
+    featured: true,
+    external: "https://medium.com/@harrison.feig/the-on-chain-advantage-of-tokenized-rwas-85d080a490a2?sharedUserId=harrison.feig",
+  },
+  {
     slug: "battle-for-tokenized-equities",
     title: "The Battle for Tokenized Equities Has Begun",
     excerpt: "Native issuance, the DTCC, and the broker are three players racing to fill the vacuum in tokenized equities. Who wins, and what does true ownership look like in a tokenized world?",
