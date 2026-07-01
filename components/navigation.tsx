@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { useState } from "react"
@@ -24,19 +23,19 @@ export function Navigation() {
       <nav className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <a
+            href="/"
             className="text-lg font-medium tracking-tight hover:text-accent transition-colors"
           >
             Harrison Feig
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.href}
-                href={item.href}
+                href={`${item.href}${item.href === "/" ? "" : "/"}`}
                 className={cn(
                   "text-sm tracking-wide transition-colors relative py-1",
                   pathname === item.href
@@ -53,19 +52,19 @@ export function Navigation() {
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
                 )}
-              </Link>
+              </a>
             ))}
           </div>
 
           {/* Contact Button - Desktop */}
-          <Link
+          <a
             href="https://www.linkedin.com/in/harrison-feig/"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex text-sm px-4 py-2 rounded-full border border-border hover:bg-secondary transition-colors"
           >
             Get in Touch
-          </Link>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -89,9 +88,9 @@ export function Navigation() {
             >
               <div className="pt-6 pb-4 flex flex-col gap-4">
                 {navItems.map((item) => (
-                  <Link
+                  <a
                     key={item.href}
-                    href={item.href}
+                    href={`${item.href}${item.href === "/" ? "" : "/"}`}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
                       "text-lg transition-colors",
@@ -101,16 +100,16 @@ export function Navigation() {
                     )}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 ))}
-                <Link
+                <a
                   href="https://www.linkedin.com/in/harrison-feig/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-accent hover:text-accent/80 transition-colors"
                 >
                   Get in Touch
-                </Link>
+                </a>
               </div>
             </motion.div>
           )}

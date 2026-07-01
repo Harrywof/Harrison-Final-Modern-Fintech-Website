@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Linkedin } from "lucide-react"
 
 const socialLinks = [
@@ -19,9 +18,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="text-xl font-medium tracking-tight">
+            <a href="/" className="text-xl font-medium tracking-tight">
               Harrison Feig
-            </Link>
+            </a>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Strategy professional specializing in tokenization, digital assets, and institutional fintech innovation at Broadridge.
             </p>
@@ -34,13 +33,13 @@ export function Footer() {
             </h4>
             <nav className="flex flex-col gap-2">
               {footerLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
-                  href={link.href}
+                  href={`${link.href}/`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </nav>
           </div>
