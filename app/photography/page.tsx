@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
@@ -156,12 +155,7 @@ export default function PhotographyPage() {
     <div className="min-h-screen pt-20">
       {/* Header */}
       <section className="max-w-6xl mx-auto px-6 py-10 md:py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl"
-        >
+        <div className="max-w-3xl">
           <p className="text-accent text-sm tracking-wider uppercase mb-4">
             Photography
           </p>
@@ -174,19 +168,16 @@ export default function PhotographyPage() {
             I am exploring new places, especially cities, coastlines, and landscapes that make me
             slow down a bit.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Filter */}
       <section className="border-y border-border/50 bg-card/30">
         <div className="max-w-6xl mx-auto px-6 py-6">
           <div className="flex flex-wrap gap-3">
-            {categories.map((category, index) => (
-              <motion.button
+            {categories.map((category) => (
+              <button
                 key={category}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 text-xs tracking-wide uppercase border rounded-full transition-colors ${
                   category === selectedCategory
@@ -195,7 +186,7 @@ export default function PhotographyPage() {
                 }`}
               >
                 {category}
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
@@ -203,111 +194,88 @@ export default function PhotographyPage() {
 
       {/* Photo Grid */}
       <section className="max-w-6xl mx-auto px-6 py-12 md:py-16">
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredPhotos.map((photo, index) => (
-              <motion.div
-                key={photo.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filteredPhotos.map((photo, index) => (
+            <div key={photo.id}>
+              <button
+                onClick={() => openLightbox(index)}
+                className="group relative block w-full overflow-hidden rounded-lg bg-secondary cursor-pointer aspect-[4/3]"
               >
-                <button
-                  onClick={() => openLightbox(index)}
-                  className="group relative block w-full overflow-hidden rounded-lg bg-secondary cursor-pointer aspect-[4/3]"
-                >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="text-sm font-medium text-foreground">{photo.location}</p>
-                      <p className="text-xs text-muted-foreground">{photo.category}</p>
-                    </div>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <p className="text-sm font-medium text-foreground">{photo.location}</p>
+                    <p className="text-xs text-muted-foreground">{photo.category}</p>
                   </div>
-                </button>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                </div>
+              </button>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Lightbox */}
-      <AnimatePresence>
-        {lightboxIndex !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-center"
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          {/* Close Button */}
+          <button
             onClick={closeLightbox}
+            className="absolute top-6 right-6 p-2 text-muted-foreground hover:text-foreground transition-colors z-10"
+            aria-label="Close lightbox"
           >
-            {/* Close Button */}
-            <button
-              onClick={closeLightbox}
-              className="absolute top-6 right-6 p-2 text-muted-foreground hover:text-foreground transition-colors z-10"
-              aria-label="Close lightbox"
-            >
-              <X className="w-6 h-6" />
-            </button>
+            <X className="w-6 h-6" />
+          </button>
 
-            {/* Navigation */}
-            <button
-              onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
-              className="absolute left-4 md:left-8 p-3 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Previous photo"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
+          {/* Navigation */}
+          <button
+            onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
+            className="absolute left-4 md:left-8 p-3 text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Previous photo"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
 
-            <button
-              onClick={(e) => { e.stopPropagation(); goToNext(); }}
-              className="absolute right-4 md:right-8 p-3 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Next photo"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); goToNext(); }}
+            className="absolute right-4 md:right-8 p-3 text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Next photo"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
 
-            {/* Image */}
-            <motion.div
-              key={lightboxIndex}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className="max-w-5xl max-h-[85vh] px-4"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Image
-                src={filteredPhotos[lightboxIndex].src}
-                alt={filteredPhotos[lightboxIndex].alt}
-                width={1200}
-                height={800}
-                className="max-h-[80vh] w-auto mx-auto rounded-lg object-contain"
-              />
-              <div className="mt-4 text-center">
-                <p className="text-foreground font-medium">{filteredPhotos[lightboxIndex].location}</p>
-                <p className="text-sm text-muted-foreground">{filteredPhotos[lightboxIndex].category}</p>
-              </div>
-            </motion.div>
-
-            {/* Counter */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-muted-foreground">
-              {lightboxIndex + 1} / {filteredPhotos.length}
+          {/* Image */}
+          <div
+            className="max-w-5xl max-h-[85vh] px-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={filteredPhotos[lightboxIndex].src}
+              alt={filteredPhotos[lightboxIndex].alt}
+              width={1200}
+              height={800}
+              className="max-h-[80vh] w-auto mx-auto rounded-lg object-contain"
+            />
+            <div className="mt-4 text-center">
+              <p className="text-foreground font-medium">{filteredPhotos[lightboxIndex].location}</p>
+              <p className="text-sm text-muted-foreground">{filteredPhotos[lightboxIndex].category}</p>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+
+          {/* Counter */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-muted-foreground">
+            {lightboxIndex + 1} / {filteredPhotos.length}
+          </div>
+        </div>
+      )}
 
       {/* Equipment Note */}
       <section className="border-t border-border/50 bg-card/30">
