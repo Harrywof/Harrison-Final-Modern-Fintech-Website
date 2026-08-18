@@ -36,8 +36,43 @@ const expertise = [
 ]
 
 export default function HomePage() {
+  const personStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Harrison Feig",
+    alternateName: "Harrison Weig",
+    url: "https://www.harrisonfeig.com",
+    sameAs: ["https://www.linkedin.com/in/harrison-feig/"],
+    jobTitle: "Business Development | Digital Assets & Tokenization",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "New York City",
+      addressRegion: "NY",
+      addressCountry: "US",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Stony Brook University",
+    },
+    knowsAbout: [
+      "Fintech",
+      "Tokenization",
+      "Digital Assets",
+      "Tokenized Equities",
+      "Real World Assets",
+      "Institutional Finance",
+      "Corporate Actions",
+      "Business Development",
+      "Financial Technology Research",
+    ],
+  }
+
   return (
     <div className="min-h-screen pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
+      />
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-12 md:py-14">
         <div className="grid lg:grid-cols-[1fr_340px] gap-10 lg:gap-12 items-center">
@@ -55,10 +90,11 @@ export default function HomePage() {
               <span className="text-accent italic font-serif">future of digital assets</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              I drive go-to-market strategy for tokenization, digital asset, and SaaS solutions
-              serving financial institutions at Broadridge. My work has helped generate $1M+ in
-              qualified pipeline and support the first on-chain proxy vote, connecting institutional
-              finance with blockchain technology.
+              I&apos;m Harrison Feig, a New York City-based fintech professional working across
+              tokenization, digital assets, business development, and institutional financial
+              technology at Broadridge. My work has helped generate $1M+ in qualified pipeline and
+              support the first on-chain proxy vote, connecting institutional finance with
+              blockchain technology.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
