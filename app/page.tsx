@@ -117,7 +117,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden lg:block"
+            className="w-full max-w-[280px] mx-auto lg:max-w-none lg:mx-0"
           >
             <div className="relative">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-secondary shadow-lg">
