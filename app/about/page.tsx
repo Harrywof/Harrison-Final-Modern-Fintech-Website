@@ -7,27 +7,27 @@ import Image from "next/image"
 const experience = [
   {
     period: "March 2025 - Present",
-    role: "Business Development | Digital Assets & Tokenization",
+    role: "Business Development | Digital Assets & Product Go-to-Market",
     company: "Broadridge Financial",
     companyUrl: "https://broadridge.com",
-    description: "Work on go-to-market strategy and outreach for digital asset solutions including Shadow (post-trade) and ClearFi (digital disclosure hub). Generated $1M+ in qualified pipeline and supported strategic partnership discussions with Chainlink, DTCC, and S&P. Part of the team that developed the first on-chain proxy vote, and currently supporting development of an MVP for a tokenized corporate actions platform.",
-    skills: ["Go-to-Market", "Digital Assets", "Tokenization", "On-Chain Proxy Voting", "Pipeline Development"],
+    description: "Work across digital asset strategy, product initiatives, and go-to-market execution for institutional financial technology solutions. Developed market-structure analyses, tokenization operating models, executive materials, and on-chain corporate actions concepts while supporting client outreach across banks, broker-dealers, asset managers, and fintech firms. Generated more than $1.5M in qualified pipeline through research, segmentation, prospecting, and qualification.",
+    skills: ["Business Development", "Digital Assets", "Tokenization", "Product Initiatives", "Go-to-Market Strategy"],
   },
   {
     period: "June 2024 - March 2025",
-    role: "Sales Management Rotational Program",
+    role: "Management Rotational Program",
     company: "Broadridge Financial",
     companyUrl: "https://broadridge.com",
-    description: "Rotated across high-impact divisions including NYFIX and the Digital Center of Excellence, focusing on blockchain product sales and go-to-market strategy. Worked cross-functionally with product, compliance, and sales teams to build crypto-sector outreach strategies.",
-    skills: ["Sales Strategy", "Blockchain Products", "Cross-functional", "GTM"],
+    description: "Built experience across financial operations, business analysis, and strategy through rotational work at Broadridge. Developed financial forecasts, ROI models, and operational performance dashboards using Excel and Power BI, and designed a business case for an automated early-warning system tied to client contract penalty thresholds.",
+    skills: ["Operations Strategy", "Business Analysis", "Financial Modeling", "Power BI", "Process Improvement"],
   },
   {
     period: "August 2023 - May 2024",
-    role: "Sales Operations Representative",
+    role: "Business Analyst, Sales Operations",
     company: "Broadridge Financial",
     companyUrl: "https://broadridge.com",
-    description: "Built targeted prospect lists and executed lead qualification for crypto-focused campaigns using Salesforce, ZoomInfo, RocketReach, and SEC databases.",
-    skills: ["Prospecting", "Salesforce", "Lead Qualification", "Market Research"],
+    description: "Supported sales operations and business development through account research, data analysis, prospect segmentation, and lead qualification. Built targeted prospect lists and used Salesforce, ZoomInfo, RocketReach, and SEC data to improve outreach planning and identify qualified institutional opportunities.",
+    skills: ["Business Analysis", "Sales Operations", "Salesforce", "Data Analysis", "Market Research"],
   },
   {
     period: "January 2022 - May 2022",
@@ -57,7 +57,7 @@ const education = [
 ]
 
 const skills = [
-  "Sales & Prospecting",
+  "Business Development",
   "Digital Assets",
   "Tokenization",
   "Executive Communication",
@@ -90,10 +90,10 @@ export default function AboutPage() {
             </h1>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                I&apos;m Harrison Feig, a business development professional driving digital assets and tokenization initiatives at Broadridge Financial. I work on go-to-market strategy for blockchain products, and have generated $1M+ in qualified pipeline while supporting strategic partnership discussions with Chainlink, DTCC, and S&P.
+                I&apos;m Harrison Feig, a business development professional working across digital assets, tokenization, and institutional financial infrastructure at Broadridge Financial. I&apos;ve generated more than $1.5M in qualified pipeline while supporting go-to-market execution, market analysis, and strategic partnership initiatives.
               </p>
               <p>
-                I was part of the team that developed the first on-chain proxy vote, a milestone in bringing institutional corporate actions to blockchain. My background combines experience in government policy, sales strategy, and hands-on product design, allowing me to understand both the regulatory landscape and the technical innovation driving institutional adoption of digital assets.
+                My background combines business analysis, financial modeling, sales operations, government policy, and hands-on product development. That range helps me connect the commercial, operational, regulatory, and technical considerations behind institutional adoption of digital assets.
               </p>
               <p>
                 I believe tokenization represents a fundamental shift in how financial infrastructure operates. My work focuses on making this transition practical, scalable, and beneficial for the institutional finance ecosystem.
